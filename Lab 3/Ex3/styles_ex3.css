@@ -1,0 +1,48 @@
+body {
+  /* margin: 0; */
+  /* padding: 0; */
+  background-image: url("./ex2_bg.PNG");
+  background-repeat: repeat;
+}
+
+.green-div {
+  margin: 0;
+  padding: 0;
+  border: 6px solid green;
+  margin: 0px 10%;
+  background-color: white;
+}
+
+.red-div {
+  border: 6px solid red;
+  text-align: right;
+}
+
+.red-div h2 {
+  border: 6px solid orange;
+}
+
+.blue-div {
+  border: 6px solid blue;
+  background-color: #e8fbfb;
+  padding: 5px;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+.blue-div h2:nth-child(1) {
+  border: 6px solid purple;
+  display: inline-block;
+}
+
+.blue-div h2:nth-child(2) {
+  display: inline-block;
+}
+
+.blue-div img {
+  float: right;
+}
+
+.blue-div p {
+  font-size: 18px;
+}

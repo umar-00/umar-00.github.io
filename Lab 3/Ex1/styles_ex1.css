@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.green-div {
+  border: 6px solid green;
+}
+
+.red-div {
+  border: 6px solid red;
+}
+
+.red-div h2 {
+  border: 6px solid orange;
+}
+
+.blue-div {
+  border: 6px solid blue;
+  background-color: white;
+}
+
+.blue-div h2:nth-child(1) {
+  border: 6px solid purple;
+  display: inline-block;
+}
+
+.blue-div h2:nth-child(2) {
+  display: inline-block;
+}
+
+.blue-div p {
+  font-size: 18px;
+}
