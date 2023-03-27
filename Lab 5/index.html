@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="lab5.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Lab 5</title>
+  </head>
+  <body>
+    <div class="div div--controlsection">
+      <div class="div__boxsize div--bottomborder">
+        <h1>Box Size:</h1>
+
+        <form name="boxSizeForm" class="div__formgroup">
+          <div class="div__inputform">
+            <label for="width">Width:</label>
+            <input type="number" name="width" />
+            <span>px</span>
+          </div>
+
+          <div class="div__inputform">
+            <label for="height">Height:</label>
+            <input type="number" name="height" />
+            <span>px</span>
+          </div>
+
+          <div class="div__buttonform">
+            <button
+              name="button"
+              class="div__button"
+              onclick="setWidthHeight(event, this.form)"
+            >
+              Set Width/Height
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="div__boxborder div--bottomborder">
+        <h1>Box Border:</h1>
+
+        <form
+          name="boxBorderWidthForm"
+          class="div__formgroup div__formgroup--bottommargin"
+        >
+          <div class="div__inputform">
+            <label for="borderWidth">Border width:</label>
+            <input type="number" name="borderWidth" />
+            <span>px</span>
+          </div>
+
+          <div class="div__buttonform">
+            <button
+              name="button"
+              class="div__button div__button--small"
+              onclick="setBorderSize(event, this.form)"
+            >
+              Set Border Size
+            </button>
+          </div>
+        </form>
+
+        <form
+          name="boxBorderColorForm"
+          onsubmit="setBorderColor(event)"
+          class="div__formgroup div__formgroup--bottommargin"
+        >
+          <span>Border Color: </span>
+          <div class="div__buttonform">
+            <button
+              name="color"
+              value="green"
+              class="div__button div__button--option div__button--green"
+            >
+              Green
+            </button>
+          </div>
+
+          <div class="div__buttonform">
+            <button
+              name="color"
+              value="red"
+              class="div__button div__button--option div__button--red"
+            >
+              Red
+            </button>
+          </div>
+
+          <div class="div__buttonform">
+            <button
+              name="color"
+              value="orange"
+              class="div__button div__button--option div__button--orange"
+            >
+              Orange
+            </button>
+          </div>
+        </form>
+
+        <form
+          name="boxBorderStyleForm"
+          onsubmit="setBorderStyle(event)"
+          class="div__formgroup"
+        >
+          <span>Border Style: </span>
+          <div class="div__buttonform">
+            <button
+              name="borderStyle"
+              value="solid"
+              class="div__button div__button--option"
+            >
+              Solid
+            </button>
+          </div>
+
+          <div class="div__buttonform">
+            <button
+              name="borderStyle"
+              value="dotted"
+              class="div__button div__button--option"
+            >
+              Dotted
+            </button>
+          </div>
+
+          <div class="div__buttonform">
+            <button
+              name="borderStyle"
+              value="dashed"
+              class="div__button div__button--option"
+            >
+              Dashed
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="div__boxbgcolor">
+        <h1>Box Background Color:</h1>
+
+        <form
+          name="boxBorderColorForm"
+          onsubmit="setBgColor(event)"
+          class="div__formgroup"
+        >
+          <span>Background Color: </span>
+          <div class="div__buttonform">
+            <button
+              name="color"
+              value="green"
+              class="div__button div__button--option div__button--green"
+            >
+              Green
+            </button>
+          </div>
+
+          <div class="div__buttonform">
+            <button
+              name="color"
+              value="red"
+              class="div__button div__button--option div__button--red"
+            >
+              Red
+            </button>
+          </div>
+
+          <div class="div__buttonform">
+            <button
+              name="color"
+              value="orange"
+              class="div__button div__button--option div__button--orange"
+            >
+              Orange
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="blocktobemodified" class="div div--blocktobemodified"></div>
+  </body>
+</html>
