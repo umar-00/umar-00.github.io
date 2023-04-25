@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab 2: Exercise 4</title>
+    <meta charset="utf-8" />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.js"
+      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.1/tufte.css"
+    />
+    <style>
+      body {
+        margin: 20px;
+      }
+      #container {
+        display: block;
+      }
+      #draw_buttons {
+        float: left;
+        width: 100%;
+        margin-top: 10px;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        /* Step 1: Your code goes here */
+        const canvas = document.getElementById("myCanvas");
+        console.log(canvas);
+        const ctx = canvas.getContext("2d");
+        ctx.lineWidth = 7;
+        ctx.fillStyle = "red";
+
+        $("#button_draw_triangle").click(function () {
+          /* Your code goes here for Step 2 */
+          ctx.beginPath();
+          ctx.moveTo(150, 80);
+          ctx.lineTo(80, 220);
+          ctx.lineTo(220, 220);
+          ctx.closePath();
+          ctx.stroke();
+          ctx.fill();
+        });
+
+        $("#button_draw_rotated_triangle").click(function () {
+          /* Your code goes here for Step 3*/
+          ctx.beginPath();
+          ctx.moveTo(220, 60);
+          ctx.lineTo(80, 140);
+          ctx.lineTo(190, 230);
+          ctx.closePath();
+          ctx.stroke();
+          ctx.fill();
+        });
+
+        $("#button_clear_canvas").click(function () {
+          /* Your code goes here for Step 4 */
+          console.log("clearing canvas");
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <h2>Manipulate the Canvas</h2>
+    <canvas
+      id="myCanvas"
+      width="300"
+      height="300"
+      style="border: 1px solid #000000"
+    ></canvas>
+
+    <div id="draw_buttons">
+      <button id="button_draw_triangle">Draw Triangle</button>
+      <button id="button_draw_rotated_triangle">Draw Rotated Triangle</button>
+      <button id="button_clear_canvas">Clear Canvas</button>
+    </div>
+  </body>
+</html>
